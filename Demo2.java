@@ -40,5 +40,32 @@ public class Demo2 {
             System.out.println();
         }
 
+        // Jagged Array - columns not defined
+        int nums[][] = new int[3][];
+
+        nums[0] = new int[3];
+        nums[1] = new int[4];
+        nums[2] = new int[5];
+
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums[i].length; j++) {
+                nums[i][j] = (int) (Math.random() * 10);
+            }
+        }
+
+        System.out.println("Jagged array");
+        for (int n[] : nums) {
+            for (int m : n) {
+                System.out.print(m + " ");
+            }
+            System.out.println();
+        }
+
     }
 }
+// Drawbacks of array
+// 1. Array sized once fixed cannot be increased
+// you can create a bigger array and copy the old elements
+// though present in heap, it gets fixed
+// 2. Array searching rquires traversing the array
+// 3. Array can store only single data type
